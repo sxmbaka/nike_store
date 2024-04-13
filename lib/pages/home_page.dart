@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nike_store/components/bottom_nav_bar.dart';
 import 'package:nike_store/pages/cart_page.dart';
 import 'package:nike_store/pages/shop_page.dart';
@@ -21,46 +22,105 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = [
     //shop page
-    const ShopPage(),
+    ShopPage(),
     //cart page
-    const CartPage(),
+    CartPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onHorizontalDragStart: (details) {
-        Scaffold.of(context).openDrawer();
-      },
-      child: Scaffold(
-        backgroundColor: Colors.grey[300],
-        bottomNavigationBar: BottomNavBar(
-          onTabChange: (index) => navigateBottomBar(index),
-        ),
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          leading: Builder(builder: (context) {
-            return IconButton(
-              icon: Icon(
-                Icons.menu,
-                color: Colors.grey[900],
-              ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-            );
-          }),
-        ),
-        drawer: Drawer(
-          backgroundColor: Colors.grey[800],
-          child: Column(
-            children: [
-              DrawerHeader(child: AssetImage("assetName"))
-            ],
-          ),
-        ),
-        body: _pages[_selectedIndex],
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      bottomNavigationBar: BottomNavBar(
+        onTabChange: (index) => navigateBottomBar(index),
       ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        title: Image.asset("assets/images/nike.png", height: 60,),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.grey[900],
+              size: 30,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          );
+        }),
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.grey[800],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(top: 40, left: 40),
+                  child: Image.asset(
+                    "assets/images/nike.png",
+                    color: Colors.white,
+                    width: MediaQuery.of(context).size.width / 2.5,
+                  ),
+                ),
+                ListTile(
+                  leading: const Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                  contentPadding: const EdgeInsets.only(left: 40),
+                  title: Text(
+                    "Home",
+                    style: GoogleFonts.figtree(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  leading: const Icon(
+                    Icons.info,
+                    color: Colors.white,
+                  ),
+                  contentPadding: const EdgeInsets.only(left: 40),
+                  title: Text(
+                    "About",
+                    style: GoogleFonts.figtree(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 30.0),
+              child: ListTile(
+                leading: const Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
+                contentPadding: const EdgeInsets.only(left: 40),
+                title: Text(
+                  "Logout",
+                  style: GoogleFonts.figtree(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+      body: _pages[_selectedIndex],
     );
   }
 }
