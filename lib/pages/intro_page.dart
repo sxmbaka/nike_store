@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nike_store/pages/home_page.dart';
@@ -47,7 +45,7 @@ class IntroPage extends StatelessWidget {
                     PageRouteBuilder(
                       transitionDuration: Duration.zero,
                       pageBuilder: (context, animation, secondaryAnimation) =>
-                          HomeScreen(),
+                          const HomeScreen(),
                     ),
                   );
                 },
