@@ -22,9 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = [
     //shop page
-    ShopPage(),
+    const ShopPage(),
     //cart page
-    CartPage(),
+    const CartPage(),
   ];
 
   @override
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onTabChange: (index) => navigateBottomBar(index),
       ),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.grey[300],
         centerTitle: true,
         title: Image.asset("assets/images/nike.png", height: 60,),
         leading: Builder(builder: (context) {

@@ -5,7 +5,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 class BottomNavBar extends StatelessWidget {
   final void Function(int) onTabChange;
 
-  BottomNavBar({
+  const BottomNavBar({
     super.key,
     required this.onTabChange,
   });
@@ -34,7 +34,6 @@ class BottomNavBar extends StatelessWidget {
           GButton(
             icon: Icons.shopping_bag_rounded,
             text: "Cart",
-            haptic: true,
             textStyle: GoogleFonts.figtree(
               fontSize: 18,
             ),

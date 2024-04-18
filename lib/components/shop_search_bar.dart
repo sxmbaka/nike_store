@@ -9,8 +9,8 @@ class ShopSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30),
-      padding: EdgeInsets.all(18),
+      margin: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),

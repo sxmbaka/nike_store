@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:nike_store/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
@@ -9,9 +10,9 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -19,9 +20,10 @@ class IntroPage extends StatelessWidget {
           child: Column(
             children: [
               const Gap(100),
-              Image.asset(
-                'assets/images/nike.png',
-                height: 280,
+              Lottie.asset(
+                'assets/lottie-files/nike-logo-lottie.json',
+                width: 600,
+                reverse: true,
               ),
               const Gap(40),
               Text(
