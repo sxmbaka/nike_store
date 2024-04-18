@@ -39,6 +39,7 @@ dependencies:
   gap:
   google_nav_bar:
   lottie: 
+  provider:
 
 dev_dependencies:
   flutter_test:

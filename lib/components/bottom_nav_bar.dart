@@ -26,14 +26,14 @@ class BottomNavBar extends StatelessWidget {
         tabs: [
           GButton(
             icon: Icons.home,
-            text: "Shop",
+            text: 'Shop',
             textStyle: GoogleFonts.figtree(
               fontSize: 18,
             ),
           ),
           GButton(
             icon: Icons.shopping_bag_rounded,
-            text: "Cart",
+            text: 'Cart',
             textStyle: GoogleFonts.figtree(
               fontSize: 18,
             ),

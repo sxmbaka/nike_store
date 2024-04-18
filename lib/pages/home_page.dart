@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.grey[300],
         centerTitle: true,
-        title: Image.asset("assets/images/nike.png", height: 60,),
+        title: Image.asset('assets/images/nike.png', height: 60,),
         leading: Builder(builder: (context) {
           return IconButton(
             icon: Icon(
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   padding: const EdgeInsets.only(top: 40, left: 40),
                   child: Image.asset(
-                    "assets/images/nike.png",
+                    'assets/images/nike.png',
                     color: Colors.white,
                     width: MediaQuery.of(context).size.width / 2.5,
                   ),
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   contentPadding: const EdgeInsets.only(left: 40),
                   title: Text(
-                    "Home",
+                    'Home',
                     style: GoogleFonts.figtree(
                       fontSize: 20,
                       color: Colors.white,
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   contentPadding: const EdgeInsets.only(left: 40),
                   title: Text(
-                    "About",
+                    'About',
                     style: GoogleFonts.figtree(
                       fontSize: 20,
                       color: Colors.white,
@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 contentPadding: const EdgeInsets.only(left: 40),
                 title: Text(
-                  "Logout",
+                  'Logout',
                   style: GoogleFonts.figtree(
                     fontSize: 20,
                     color: Colors.white,

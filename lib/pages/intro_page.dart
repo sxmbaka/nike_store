@@ -27,7 +27,7 @@ class IntroPage extends StatelessWidget {
               ),
               const Gap(40),
               Text(
-                "Just do it!",
+                'Just do it!',
                 style: GoogleFonts.figtree(
                   fontWeight: FontWeight.bold,
                   fontSize: 40,

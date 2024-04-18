@@ -19,7 +19,7 @@ class ShopSearchBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Search Nike",
+            'Search Nike',
             style: GoogleFonts.figtree(
               fontSize: 18,
               fontWeight: FontWeight.w500,
